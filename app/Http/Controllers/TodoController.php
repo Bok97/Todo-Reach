@@ -105,7 +105,7 @@ class TodoController extends ApiController
             $todo->update([
                 'completed' => $isCompleted,
             ]);
-            return $this->successResponse('Successfully updated text', new TodoResource($todo));
+            return $this->successResponse('Todo Completed', new TodoResource($todo));
         }
         return $this->notFoundResponse('Failed! no todo found.', true);
     }
